@@ -27,3 +27,9 @@ $container = new \Slim\Container();
 // Load dependencies
 foreach(glob(__DIR__ . "/Config/Dependencies/*.php") as $file)
     require_once($file);
+
+// Global functions
+// Dump and die!
+function dd($input) {
+    var_dump($input); die();
+}

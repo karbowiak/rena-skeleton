@@ -1,4 +1,4 @@
 <?php
 
 // Index
-$app->get("/")->setName("frontpage");
+//$app->get("/")->setName("frontpage");
