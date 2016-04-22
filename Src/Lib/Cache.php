@@ -108,14 +108,13 @@ class Cache
      * to integers when performing an atomic increment operation.
      *
      * @param string $key Key of numeric Cache item to increment
-     * @param int $step
      * @param int $timeout
      *
      * @return callable Function returning item's new value on successful increment, else `false`
      */
-    public function increment($key, $step = 1, $timeout = 0)
+    public function increment($key, $timeout = 0)
     {
-        $data = $this->redis->incr($key, $step);
+        $data = $this->redis->incr($key);
 
         if ($timeout) {
             $this->expire($key, $timeout);
@@ -132,12 +131,11 @@ class Cache
      * to integers when performing an atomic decrement operation.
      *
      * @param string $key Key of numeric Cache item to decrement
-     * @param int $step Offset to decrement - defaults to 1
      * @param int $timeout A strtotime() compatible Cache time.
      *
      * @return Closure Function returning item's new value on successful decrement, else `false`
      */
-    public function decrement($key, $step = 1, $timeout = 0)
+    public function decrement($key, $timeout = 0)
     {
         $data = $this->redis->decr($key);
 
