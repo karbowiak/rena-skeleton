@@ -9,5 +9,8 @@ $container["Db"] = function($container) {
     $timer = $container->get("Logger");
     /** @var \Rena\Lib\Config $config */
     $config = $container->get("Config");
-    return new \Rena\Lib\Db($cache, $logger, $timer, $config);
+    /** @var \Psr\Http\Message\RequestInterface $request */
+    $request = $container->get("request");
+    
+    return new \Rena\Lib\Db($cache, $logger, $timer, $config, $request);
 };
