@@ -6,22 +6,74 @@ use Monolog\Logger;
 use PDO;
 use Psr\Http\Message\RequestInterface;
 
+/**
+ * Class Db
+ * @package Rena\Lib
+ */
 class Db
 {
+    /**
+     * @var bool
+     */
     public $persistence = true;
+    /**
+     * @var int
+     */
     public $timeout = 10;
+    /**
+     * @var int
+     */
     protected $queryCount = 0;
+    /**
+     * @var int
+     */
     protected $queryTime = 0;
+    /**
+     * @var array
+     */
     protected $credentials = array();
+    /**
+     * @var array
+     */
     protected $connections = array();
+    /**
+     * @var Timer array
+     */
     protected $timers = array();
+    /**
+     * @var PDO
+     */
     private $pdo;
+    /**
+     * @var Cache
+     */
     private $cache;
+    /**
+     * @var Logger
+     */
     private $logger;
+    /**
+     * @var Timer
+     */
     private $timer;
+    /**
+     * @var Config
+     */
     private $config;
+    /**
+     * @var RequestInterface
+     */
     private $request;
 
+    /**
+     * Db constructor.
+     * @param Cache $cache
+     * @param Logger $logger
+     * @param Timer $timer
+     * @param Config $config
+     * @param RequestInterface $requestInterface
+     * @throws \Exception
+     */
     function __construct(Cache $cache, Logger $logger, Timer $timer, Config $config, RequestInterface $requestInterface)
     {
         $this->cache = $cache;
@@ -49,6 +101,13 @@ class Db
         }
     }
 
+    /**
+     * @param String $query
+     * @param array $parameters
+     * @param int $cacheTime
+     * @return array
+     * @throws \Exception
+     */
     public function queryRow(String $query, $parameters = array(), int $cacheTime = 30)
     {
         // Get the result
@@ -62,6 +121,13 @@ class Db
         return array();
     }
 
+    /**
+     * @param String $query
+     * @param array $parameters
+     * @param int $cacheTime
+     * @return array|bool|null
+     * @throws \Exception
+     */
     public function query(String $query, $parameters = array(), int $cacheTime = 30)
     {
         // Sanity check
@@ -124,6 +190,11 @@ class Db
         }
     }
 
+    /**
+     * @param String $query
+     * @param array $parameters
+     * @return string
+     */
     public function getKey(String $query, $parameters = array())
     {
         foreach ($parameters as $key => $value) {
@@ -133,6 +204,11 @@ class Db
         return 'Db:' . sha1($query);
     }
 
+    /**
+     * @param String $query
+     * @param array $parameters
+     * @param int $duration
+     */
     public function logQuery(String $query, $parameters = array(), int $duration = 0)
     {
         // Don't log queries taking less than 10 seconds.
@@ -149,6 +225,14 @@ class Db
         $this->logger->info(($duration != 0 ? number_format($duration / 1000, 3) . 's ' : '') . " Query: \n$query;\n$uri");
     }
 
+    /**
+     * @param String $query
+     * @param String $field
+     * @param array $parameters
+     * @param int $cacheTime
+     * @return null
+     * @throws \Exception
+     */
     public function queryField(String $query, String $field, $parameters = array(), int $cacheTime = 30)
     {
         // Get the result
@@ -165,6 +249,26 @@ class Db
         return $resultRow[$field];
     }
 
+    /**
+     * @param string $query
+     * @param array $parameters
+     * @param string $suffix
+     * @param bool $returnID
+     *
+     * @return bool|int|string
+     *
+     * @throws \Exception
+     *
+     **
+     * Takes an insert query up to the "VALUES" string and an array with the rows to be inserted
+     * The rows should be associative arrays much like when doing other db queries
+     *
+     * Generates a long query to insert all the rows in a single execute
+     *
+     * query = "INSERT INTO table (columns)"
+     * parameters = array(array(":key" => value), array(":key" => value))
+     * suffix = optional suffix to the query
+     */
     public function multiInsert(String $query, $parameters = array(), String $suffix = "", bool $returnID = false)
     {
         $queryIndexes = array();
@@ -189,6 +293,12 @@ class Db
         }
     }
 
+    /**
+     * @param String $query
+     * @param array $parameters
+     * @param bool $returnID
+     * @return bool|int|string
+     */
     public function execute(String $query, $parameters = array(), bool $returnID = false)
     {
         // Init the timer
@@ -246,16 +356,28 @@ class Db
         return $rowCount;
     }
 
+    /**
+     * @return int
+     */
     public function getQueryCount(): int
     {
         return $this->queryCount;
     }
 
+    /**
+     * @return float
+     */
     public function getQueryTime(): float
     {
         return $this->queryTime;
     }
 
+    /**
+     * @param String $name
+     * @param String $query
+     * @param array $parameters
+     * @return bool|\mysqli_result|null
+     */
     public function asyncExec(String $name, String $query, $parameters = array())
     {
         $key = sha1($name . $this->request->getUri()->getPath());
@@ -288,6 +410,11 @@ class Db
         return $connection->query($query, MYSQLI_ASYNC);
     }
 
+    /**
+     * @param String $name
+     * @param int $cacheTime
+     * @return array|bool|null
+     */
     public function asyncData(String $name, int $cacheTime = 360)
     {
         $key = sha1($name . $this->request->getUri()->getPath());
