@@ -21,3 +21,13 @@ https://github.com/Seldaek/monolog
 
 # Slim
 http://www.slimframework.com/docs/
+
+# Slim Page Cache
+https://github.com/sylweriusz/webcache-middleware
+
+# Slim REST Controller Generator
+https://github.com/DavidWiesner/slim3-rest-controller
+
+# Slim ACL
+https://github.com/slimphp-api/slim-acl
+
