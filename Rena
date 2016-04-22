@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+
+// Error display
+ini_set("display_errors", 1);
+error_reporting(E_ALL);
+
+// Load App
+require_once("app.php");
+
+// Launch the CLI
+$cli = new Symfony\Component\Console\Application("Rena CLI");
+
+// Load all the commands
+$dirs = array("Tasks/*.php", "App/Tasks/*.php", "Tasks/*/*.php", "App/Tasks/*/*.php", "Tasks/*/*/*.php", "App/Tasks/*/*/*.php");
+$tasks = array();
+foreach ($dirs as $dir) {
+    $files = glob($dir);
+    foreach ($files as $file) {
+        $name = str_replace(".php", "", basename($file));
+        $namespace = ucfirst(str_replace("/", "\\", str_replace(".php", "", $file)));
+        require_once($file);
+        $import = "\\Rena\\{$namespace}";
+
+        $cli->add(new $import());
+    }
+}
+
+$cli->addCommands($tasks);
+$cli->run();
+
+// Prompter
+function prompt($prompt, $default = "")
+{
+    echo "$prompt [$default] ";
+    $answer = trim(fgets(STDIN));
+    if (strlen($answer) == 0)
+        return $default == "yes" ? true : $default;
+    return $answer;
+}

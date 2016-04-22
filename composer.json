@@ -1,0 +1,42 @@
+{
+  "name": "karbowiak/rena-skeleton",
+  "description": "A Slim3 skeleton with cli/db/cache/twig/migrations integrated",
+  "license": "MIT",
+  "type": "project",
+  "keywords": [
+    "slim-framework",
+    "skeleton",
+    "eve-auth",
+    "console",
+    "cli-tool",
+    "migration",
+    "scaffold"
+  ],
+  "authors": [
+    {
+      "name": "Michael Karbowiak",
+      "email": "michael@karbowiak.dk",
+      "homepage": "https://karbowiak.dk"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Rena\\": ["Src/", "App/"]
+    }
+  },
+  "require": {
+    "slim/slim": "3.3.*",
+    "slim/twig-view": "2.1.*",
+    "slim/flash": "0.1.*",
+    "zeuxisoo/slim-whoops": "0.5.*",
+    "symfony/translation": "3.0.*",
+    "symfony/twig-bridge": "3.0.*",
+    "symfony/console": "3.0.*",
+    "monolog/monolog": "1.9.*",
+    "alexgarrett/violin": "2.2.*",
+    "robmorgan/phinx": "0.5.*",
+    "php-school/cli-menu": "1.0.*",
+    "lavary/crunz": "1.*",
+    "killmails/oauth2-eve": "0.2.*"
+  }
+}
