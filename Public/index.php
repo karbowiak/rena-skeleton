@@ -12,7 +12,7 @@ if(PHP_SAPI == "cli-server") {
 session_start();
 
 // Load App
-require_once(__DIR__ . "/../app.php");
+require_once(__DIR__ . "/../App.php");
 
 // Load Slim
 $app = new \Slim\App($container);
