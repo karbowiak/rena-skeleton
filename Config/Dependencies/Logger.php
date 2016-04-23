@@ -3,10 +3,11 @@
 $container["Logger"] = function($container) {
     /** @var \Rena\Lib\Config $config */
     $config = $container->get("Config");
+    $config = $config->getAll("settings");
 
-    $logger = new \Monolog\Logger($config->get("name", "logger"));
+    $logger = new \Monolog\Logger($config["logger"]["name"]);
     $logger->pushProcessor(new \Monolog\Processor\UidProcessor());
-    $logger->pushHandler(new \Monolog\Handler\StreamHandler($config->get("path", "logger"), \Monolog\Logger::DEBUG));
+    $logger->pushHandler(new \Monolog\Handler\StreamHandler($config["logger"]["path"], \Monolog\Logger::DEBUG));
 
     return $logger;
 };

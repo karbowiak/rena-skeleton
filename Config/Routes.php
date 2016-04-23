@@ -1,4 +1,9 @@
 <?php
+// Define the App Path
+define("APPPATH", BASEDIR . "/App");
 
-// Index
-//$app->get("/")->setName("frontpage");
+$app->group("", function() use ($app) {
+    $controller = new App\Controllers\IndexController($app);
+
+    $app->get("/", $controller("index"));
+});

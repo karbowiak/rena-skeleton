@@ -3,6 +3,34 @@
 // Keep at the top
 $config = array();
 
+// App
+$config["app"] = array(
+    "url" => "http://crunch.karbowiak.dk",
+    "hash" => array(
+        "algorithm" => PASSWORD_BCRYPT,
+        "cost" => 15
+    )
+);
+
+// Settings
+$config["settings"] = array(
+    "debug" => true,
+    "whoops.editor" => "sublime",
+    "displayErrorDetails" => true,
+    "view" => array(
+        "templatePath" => BASEDIR . "/App/Templates/",
+        "twig" => array(
+            "cache" => BASEDIR . "/Cache/Templates/",
+            "debug" => true,
+            "auto_reload" => true
+        )
+    ),
+    "logger" => array(
+        "name" => "App",
+        "path" => BASEDIR . "/Logs/app.log"
+    )
+);
+
 // Cache
 $config["redis"] = array(
     "host" => "127.0.0.1",
@@ -18,22 +46,6 @@ $config["database"] = array(
     "password" => null,
     "emulatePrepares" => true,
     "useBufferedQuery" => true
-);
-
-// Logging
-$config["logger"] = array(
-    "name" => "rena.log",
-    "path" => BASEDIR . "/Logs/"
-);
-
-// View / Twig
-$config["view"] = array(
-    "templatePath" => BASEDIR . "/App/Templates/",
-    "twig" => array(
-        "cache" => BASEDIR . "/Cache/Templates/",
-        "debug" => true,
-        "auto_reload" => true
-    )
 );
 
 // Keep at the bottom

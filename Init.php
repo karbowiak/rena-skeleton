@@ -21,13 +21,6 @@ if (file_exists(__DIR__ . "/Config/Config.php")) {
     throw new Exception("Config.php not found (you might wanna start by copying config_new.php)");
 }
 
-// Load the container
-$container = new \Slim\Container();
-
-// Load dependencies
-foreach(glob(__DIR__ . "/Config/Dependencies/*.php") as $file)
-    require_once($file);
-
 // Global functions
 // Dump and die!
 function dd($input) {

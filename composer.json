@@ -21,7 +21,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "Rena\\": ["Src/", "App/"]
+      "Rena\\": "Src/",
+      "App\\": "App/"
     }
   },
   "require": {
@@ -37,6 +38,7 @@
     "robmorgan/phinx": "0.5.*",
     "php-school/cli-menu": "1.0.*",
     "lavary/crunz": "1.*",
-    "killmails/oauth2-eve": "0.2.*"
+    "killmails/oauth2-eve": "0.2.*",
+    "martynbiz/slim3-controller": "dev-master"
   }
 }

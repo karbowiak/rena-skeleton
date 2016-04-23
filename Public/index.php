@@ -6,8 +6,14 @@ if(PHP_SAPI == "cli-server") {
         return false;
 }
 
-// Load App
-require_once(__DIR__ . "/../App.php");
+// Load Init
+require_once(__DIR__ . "/../Init.php");
+
+// Load Slim
+$app = new \Slim\App($config);
+
+// Load the container
+require_once(BASEDIR . "/Config/Dependencies.php");
 
 // Start the session
 /** @var \Slim\Container $container */
@@ -16,8 +22,8 @@ session_set_save_handler($session, true);
 session_cache_limiter(false);
 session_start();
 
-// Load Slim
-$app = new \Slim\App($container);
+// Add Whoops
+$app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
 
 // Load Routes
 require_once(BASEDIR . "/Config/Routes.php");

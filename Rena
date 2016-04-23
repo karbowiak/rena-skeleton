@@ -6,7 +6,7 @@ ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
 // Load App
-require_once("App.php");
+require_once("Init.php");
 
 // Launch the CLI
 $cli = new Symfony\Component\Console\Application("Rena CLI");
