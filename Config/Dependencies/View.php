@@ -12,3 +12,5 @@ $container["view"] = function($container) {
 
     return $view;
 };
+
+return $container;

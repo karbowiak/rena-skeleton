@@ -14,3 +14,5 @@ $container["Db"] = function($container) {
     
     return new \Rena\Lib\Db($cache, $logger, $timer, $config, $request);
 };
+
+return $container;

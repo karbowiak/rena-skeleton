@@ -5,3 +5,5 @@ $container["Session"] = function($container) {
     $cache = $container->get("Cache");
     return new \Rena\Lib\SessionHandler($cache);
 };
+
+return $container;

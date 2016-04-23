@@ -18,16 +18,16 @@ $config["settings"] = array(
     "whoops.editor" => "sublime",
     "displayErrorDetails" => true,
     "view" => array(
-        "templatePath" => BASEDIR . "/App/Templates/",
+        "templatePath" => __DIR__ . "/../App/Templates/",
         "twig" => array(
-            "cache" => BASEDIR . "/Cache/Templates/",
+            "cache" => __DIR__ . "/../Cache/Templates/",
             "debug" => true,
             "auto_reload" => true
         )
     ),
     "logger" => array(
         "name" => "App",
-        "path" => BASEDIR . "/Logs/app.log"
+        "path" => __DIR__ . "/../Logs/app.log"
     )
 );
 

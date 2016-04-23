@@ -11,3 +11,5 @@ $container["Logger"] = function($container) {
 
     return $logger;
 };
+
+return $container;

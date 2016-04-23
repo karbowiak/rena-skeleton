@@ -7,22 +7,22 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CreateLibrary extends Command
+class CreateController extends Command
 {
     protected function configure()
     {
         $this
-            ->setName("create:library")
-            ->setDescription("Create a library file");
+            ->setName("create:controller")
+            ->setDescription("Creates a controller");
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $name = prompt("Name of Library");
+        $name = prompt("Name of Controller");
 
-        $directory = __DIR__ . "/../Src/Lib/";
+        $directory = __DIR__ . "/../App/Controllers/";
 
-        $file = file_get_contents(__DIR__ . "/../Scaffolds/library_template.txt");
+        $file = file_get_contents(__DIR__ . "/../Scaffolds/controller_template.txt");
 
         $file = str_replace("?name", ucfirst($name), $file);
 
@@ -44,14 +44,14 @@ class CreateLibrary extends Command
                 return;
             }
         }
-        if (!file_exists($directory . ucfirst($name) . ".php")) {
-            $fh = fopen($directory . ucfirst($name) . ".php", "w");
+        if (!file_exists($directory . ucfirst($name) . "Controller.php")) {
+            $fh = fopen($directory . ucfirst($name) . "Controller.php", "w");
             fwrite($fh, $file);
             fclose($fh);
-            $className = ucfirst($name) . ".php";
-            $output->writeln("Success, Library {$name} has been created");
+            $className = ucfirst($name) . "Controller.php";
+            $output->writeln("Success, Controller {$name} has been created");
         } else {
-            $output->writeln("Error, Library {$name} already exists.");
+            $output->writeln("Error, Controller {$name} already exists.");
         }
     }
 }

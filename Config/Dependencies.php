@@ -9,3 +9,5 @@ else
 // Load dependencies
 foreach(glob(__DIR__ . "/Dependencies/*.php") as $file)
     require_once($file);
+
+return $container;

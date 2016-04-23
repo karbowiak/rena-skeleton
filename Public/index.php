@@ -13,7 +13,7 @@ require_once(__DIR__ . "/../Init.php");
 $app = new \Slim\App($config);
 
 // Load the container
-require_once(BASEDIR . "/Config/Dependencies.php");
+require_once(__DIR__ . "/../Config/Dependencies.php");
 
 // Start the session
 /** @var \Slim\Container $container */
@@ -26,7 +26,11 @@ session_start();
 $app->add(new \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware);
 
 // Load Routes
-require_once(BASEDIR . "/Config/Routes.php");
+require_once(__DIR__ . "/../Config/Routes.php");
 
 // Start the app
 $app->run();
+
+function render($templateFile, $dataArray = array(), $status = null, $contentType = null) {
+    
+}

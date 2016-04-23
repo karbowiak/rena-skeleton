@@ -5,3 +5,5 @@ $container["Cache"] = function($container) {
     $config = $container->get("Config");
     return new \Rena\Lib\Cache($config);
 };
+
+return $container;

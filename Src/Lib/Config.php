@@ -18,7 +18,7 @@ class Config
      * Config constructor.
      */
     function __construct() {
-        $this->settings = require(BASEDIR . "/Config/Config.php");
+        $this->settings = require(__DIR__ . "/../../Config/Config.php");
     }
 
     /**

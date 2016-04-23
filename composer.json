@@ -25,6 +25,7 @@
       "App\\": "App/"
     }
   },
+  "minimum-stability": "dev",
   "require": {
     "slim/slim": "3.3.*",
     "slim/twig-view": "2.1.*",
@@ -39,6 +40,9 @@
     "php-school/cli-menu": "1.0.*",
     "lavary/crunz": "1.*",
     "killmails/oauth2-eve": "0.2.*",
-    "martynbiz/slim3-controller": "dev-master"
+    "martynbiz/slim3-controller": "@dev",
+    "php-pm/psr7-adapter": "@dev",
+    "php-pm/php-pm": "@dev",
+    "jtrumbull/xml-parser": "dev-master"
   }
 }

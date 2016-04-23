@@ -1,10 +1,7 @@
 <?php
 
-// Define the basedir
-define("BASEDIR", __DIR__);
-
 // Change to this dir
-chdir(BASEDIR);
+chdir(__DIR__);
 
 // Load the autoloader
 if (file_exists(__DIR__ . "/vendor/autoload.php")) {
