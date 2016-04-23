@@ -8,6 +8,9 @@ error_reporting(E_ALL);
 // Load App
 require_once("Init.php");
 
+// Load the container
+require_once(BASEDIR . "/Config/Dependencies.php");
+
 // Launch the CLI
 $cli = new Symfony\Component\Console\Application("Rena CLI");
 

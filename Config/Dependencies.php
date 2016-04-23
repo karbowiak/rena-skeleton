@@ -1,7 +1,10 @@
 <?php
 
 // Load the container
-$container = $app->getContainer();
+if(!isset($app))
+    $container = new \Slim\Container();
+else
+    $container = $app->getContainer();
 
 // Load dependencies
 foreach(glob(__DIR__ . "/Dependencies/*.php") as $file)
