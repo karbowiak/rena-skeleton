@@ -31,3 +31,9 @@ https://github.com/DavidWiesner/slim3-rest-controller
 # Slim ACL
 https://github.com/slimphp-api/slim-acl
 
+# PHPDebugBar
+http://phpdebugbar.com/docs/rendering.html
+
+# Assetic
+https://github.com/kriswallsmith/assetic
+https://github.com/zacao/slimvc <- example for how it's used
