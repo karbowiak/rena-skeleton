@@ -1,6 +1,8 @@
 <?php
 
 $container["view"] = function($container) {
+    
+    
     /** @var \Rena\Lib\Config $config */
     $config = $container->get("Config");
     $config = $config->getAll("settings");

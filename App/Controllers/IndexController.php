@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use MartynBiz\Slim3Controller\Controller;
+use Rena\Lib\Middleware\RenaController;
 
-class IndexController extends Controller
+class IndexController extends RenaController
 {
     public function index() {
         return $this->render("placeholder.html", array());

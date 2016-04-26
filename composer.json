@@ -38,11 +38,9 @@
     "alexgarrett/violin": "2.2.*",
     "robmorgan/phinx": "0.5.*",
     "php-school/cli-menu": "1.0.*",
-    "lavary/crunz": "1.*",
     "killmails/oauth2-eve": "0.2.*",
-    "martynbiz/slim3-controller": "@dev",
-    "php-pm/psr7-adapter": "@dev",
-    "php-pm/php-pm": "@dev",
-    "jtrumbull/xml-parser": "dev-master"
+    "php-pm/php-pm": "dev-master",
+    "zendframework/zend-diactoros": "1.3.*",
+    "jtrumbull/xml-parser": "1.0.*"
   }
 }

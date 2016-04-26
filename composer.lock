@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8216ba7095b91436c7379e6ac6d4d45",
-    "content-hash": "21d6f0322284c5bd335fe936bf184986",
+    "hash": "6d04535946fe1fcc7564155c915f2293",
+    "content-hash": "dd4ef74eb070afb90512de31dd0950f2",
     "packages": [
         {
             "name": "alexgarrett/violin",
@@ -511,20 +511,19 @@
         },
         {
             "name": "jtrumbull/xml-parser",
-            "version": "dev-master",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jtrumbull/xml-parser.git",
-                "reference": "1651a6a76238b07529725ccd7d2a0c43e95426d1"
+                "reference": "94212d1bfc304ba9ac0a50b14e0a0cf67c877e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jtrumbull/xml-parser/zipball/1651a6a76238b07529725ccd7d2a0c43e95426d1",
-                "reference": "1651a6a76238b07529725ccd7d2a0c43e95426d1",
+                "url": "https://api.github.com/repos/jtrumbull/xml-parser/zipball/94212d1bfc304ba9ac0a50b14e0a0cf67c877e86",
+                "reference": "94212d1bfc304ba9ac0a50b14e0a0cf67c877e86",
                 "shasum": ""
             },
             "require": {
-                "ext-simplexml": "*",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -538,7 +537,7 @@
                 "MIT"
             ],
             "description": "PHP Class that parses XML objects",
-            "time": "2016-03-18 00:50:20"
+            "time": "2016-02-04 12:49:48"
         },
         {
             "name": "killmails/oauth2-eve",
@@ -592,67 +591,6 @@
                 "oauth2"
             ],
             "time": "2016-02-04 17:16:50"
-        },
-        {
-            "name": "lavary/crunz",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lavary/crunz.git",
-                "reference": "10994871d80e7d3d1d52a48d1c83ac9ae14e849f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lavary/crunz/zipball/10994871d80e7d3d1d52a48d1c83ac9ae14e849f",
-                "reference": "10994871d80e7d3d1d52a48d1c83ac9ae14e849f",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.1",
-                "mtdowling/cron-expression": "^1.1",
-                "nesbot/carbon": "^1.21",
-                "php": ">=5.5",
-                "symfony/console": "^3.0",
-                "symfony/finder": "^3.0",
-                "symfony/process": "^3.0",
-                "symfony/yaml": "^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
-            },
-            "bin": [
-                "crunz"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Crunz\\": "src/"
-                },
-                "files": [
-                    "src/Helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Reza M. Lavaryan",
-                    "email": "mrl.8081@gmail.com"
-                }
-            ],
-            "description": "Schedule your tasks right from the code.",
-            "homepage": "https://github.com/lavary/crunz",
-            "keywords": [
-                "Laravel Task Scheduler",
-                "PHP Task Scheduler",
-                "Task Scheduler",
-                "cron",
-                "cron jobs",
-                "scheduler"
-            ],
-            "time": "2016-04-23 17:54:03"
         },
         {
             "name": "league/oauth2-client",
@@ -716,57 +654,6 @@
                 "single sign on"
             ],
             "time": "2016-04-19 12:48:05"
-        },
-        {
-            "name": "martynbiz/slim3-controller",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/martynbiz/slim3-controller.git",
-                "reference": "af51a232a11528f23731173530a4f3e77968661f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/martynbiz/slim3-controller/zipball/af51a232a11528f23731173530a4f3e77968661f",
-                "reference": "af51a232a11528f23731173530a4f3e77968661f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "slim/slim": "~3.0",
-                "symfony/css-selector": "^3.0",
-                "symfony/dom-crawler": "^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.8.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MartynBiz\\Slim3Controller\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Martyn Bissett",
-                    "email": "martynbissett@yahoo.co.uk",
-                    "homepage": "http://martyn.biz",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides controller functionality to Slim Framework v3. Also includes PHPUnit TestCase for testing controllers.",
-            "homepage": "http://github.com/martynbiz/slim3-controller",
-            "keywords": [
-                "controller",
-                "mvc",
-                "slim",
-                "slim3"
-            ],
-            "time": "2016-04-19 10:42:32"
         },
         {
             "name": "mkraemer/react-pcntl",
@@ -879,97 +766,6 @@
             "time": "2014-04-24 13:29:03"
         },
         {
-            "name": "mtdowling/cron-expression",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mtdowling/cron-expression.git",
-                "reference": "c9ee7886f5a12902b225a1a12f36bb45f9ab89e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mtdowling/cron-expression/zipball/c9ee7886f5a12902b225a1a12f36bb45f9ab89e5",
-                "reference": "c9ee7886f5a12902b225a1a12f36bb45f9ab89e5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0|~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Cron": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
-            "keywords": [
-                "cron",
-                "schedule"
-            ],
-            "time": "2016-01-26 21:23:30"
-        },
-        {
-            "name": "nesbot/carbon",
-            "version": "1.21.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
-                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/translation": "~2.6|~3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0|~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Carbon\\": "src/Carbon/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brian Nesbitt",
-                    "email": "brian@nesbot.com",
-                    "homepage": "http://nesbot.com"
-                }
-            ],
-            "description": "A simple API extension for DateTime.",
-            "homepage": "http://carbon.nesbot.com",
-            "keywords": [
-                "date",
-                "datetime",
-                "time"
-            ],
-            "time": "2015-11-04 20:07:17"
-        },
-        {
             "name": "nikic/fast-route",
             "version": "v0.6.0",
             "source": {
@@ -1018,12 +814,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-pm/php-pm.git",
-                "reference": "f726f85ad369dd8733fad6983de9b77b051eb448"
+                "reference": "906942ef85531e750cc5c2b4abb7a8b4e9fd00f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-pm/php-pm/zipball/f726f85ad369dd8733fad6983de9b77b051eb448",
-                "reference": "f726f85ad369dd8733fad6983de9b77b051eb448",
+                "url": "https://api.github.com/repos/php-pm/php-pm/zipball/906942ef85531e750cc5c2b4abb7a8b4e9fd00f2",
+                "reference": "906942ef85531e750cc5c2b4abb7a8b4e9fd00f2",
                 "shasum": ""
             },
             "require": {
@@ -1059,38 +855,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2016-04-21 13:16:05"
-        },
-        {
-            "name": "php-pm/psr7-adapter",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-pm/php-pm-psr7.git",
-                "reference": "ffc96a278a980a6a52dbcccc90d64f4b9a27f385"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-pm/php-pm-psr7/zipball/ffc96a278a980a6a52dbcccc90d64f4b9a27f385",
-                "reference": "ffc96a278a980a6a52dbcccc90d64f4b9a27f385",
-                "shasum": ""
-            },
-            "require": {
-                "php-pm/php-pm": "*",
-                "zendframework/zend-diactoros": "^1.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PHPPM\\Psr7\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A PSR-7 middleware bridge for PHP-PM",
-            "time": "2016-04-19 11:27:21"
+            "time": "2016-04-25 20:15:11"
         },
         {
             "name": "php-school/cli-menu",
@@ -1951,59 +1716,6 @@
             "time": "2016-04-20 18:53:54"
         },
         {
-            "name": "symfony/css-selector",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "e17f386efef7258ac671c24e727673abd086b0cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e17f386efef7258ac671c24e727673abd086b0cf",
-                "reference": "e17f386efef7258ac671c24e727673abd086b0cf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony CssSelector Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-03-04 07:56:56"
-        },
-        {
             "name": "symfony/debug",
             "version": "dev-master",
             "source": {
@@ -2061,62 +1773,6 @@
             "time": "2016-03-30 10:41:47"
         },
         {
-            "name": "symfony/dom-crawler",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "46e42db28cb4ab7a2749cd3dae117867c3cead70"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/46e42db28cb4ab7a2749cd3dae117867c3cead70",
-                "reference": "46e42db28cb4ab7a2749cd3dae117867c3cead70",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "require-dev": {
-                "symfony/css-selector": "~2.8|~3.0"
-            },
-            "suggest": {
-                "symfony/css-selector": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DomCrawler\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony DomCrawler Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:27:47"
-        },
-        {
             "name": "symfony/filesystem",
             "version": "dev-master",
             "source": {
@@ -2164,55 +1820,6 @@
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
             "time": "2016-04-12 18:27:47"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb",
-                "reference": "c3e7b8a86d3044a3dff2cc5a89f2c523ccf0e0fb",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Finder Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-03-10 11:16:56"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2522,12 +2129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "babe6fca0eea3bac736017f817fb7d26147e4792"
+                "reference": "f167cc0a65ab0a2a53558c9385b4a324c1a36b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/babe6fca0eea3bac736017f817fb7d26147e4792",
-                "reference": "babe6fca0eea3bac736017f817fb7d26147e4792",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f167cc0a65ab0a2a53558c9385b4a324c1a36b02",
+                "reference": "f167cc0a65ab0a2a53558c9385b4a324c1a36b02",
                 "shasum": ""
             },
             "require": {
@@ -2575,20 +2182,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-04-20 06:47:43"
+            "time": "2016-04-24 13:54:56"
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "dev-develop",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "18182f681370cbd23fec64dbec8275a376bf4b66"
+                "reference": "452b01b64488c97a36c77f293e149ccf2c3e81d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/18182f681370cbd23fec64dbec8275a376bf4b66",
-                "reference": "18182f681370cbd23fec64dbec8275a376bf4b66",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/452b01b64488c97a36c77f293e149ccf2c3e81d7",
+                "reference": "452b01b64488c97a36c77f293e149ccf2c3e81d7",
                 "shasum": ""
             },
             "require": {
@@ -2625,7 +2232,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-03-17 18:05:07"
+            "time": "2016-03-17 18:04:49"
         },
         {
             "name": "zeuxisoo/slim-whoops",
@@ -2683,10 +2290,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "martynbiz/slim3-controller": 20,
-        "php-pm/psr7-adapter": 20,
-        "php-pm/php-pm": 20,
-        "jtrumbull/xml-parser": 20
+        "php-pm/php-pm": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

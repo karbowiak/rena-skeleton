@@ -30,7 +30,3 @@ require_once(__DIR__ . "/../Config/Routes.php");
 
 // Start the app
 $app->run();
-
-function render($templateFile, $dataArray = array(), $status = null, $contentType = null) {
-    
-}
