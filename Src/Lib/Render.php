@@ -2,9 +2,7 @@
 
 namespace Rena\Lib;
 
-use PHPPM\React\HttpResponse;
 use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\StreamInterface;
 use Slim\Views\Twig;
 use XMLParser\XMLParser;
 

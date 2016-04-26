@@ -53,7 +53,7 @@ class RenaBridge implements BridgeInterface
 
         $middleware = $this->middleware;
 
-        $initialResponse = new DiactorosResponse\TextResponse("", 200, headers_list());
+        $initialResponse = new DiactorosResponse;
         $renaResp = $middleware($renaReq, $initialResponse);
 
         $this->mapResponse($renaResp, $response);
