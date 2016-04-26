@@ -94,17 +94,41 @@ abstract class RenaController
         $this->response = $response;
     }
 
+
     /**
      * @param $file
      * @param array $args
+     * @param int $status
+     * @param string $contentType
      * @return mixed
      */
-    protected function render($file, $args=array())
-    {
+    protected function render(String $file, $args = array(), int $status = 200, String $contentType = "text/html; charset=UTF-8") {
         $container = $this->app->getContainer();
 
         // Render the view using the render method
-        return $container->render->render($file, $args, null, null, $this->response);
+        return $container->render->render($file, $args, $status, $contentType, $this->response);
+    }
+
+    /**
+     * @param array $args
+     * @param int $status
+     * @return mixed
+     */
+    protected function json($args = array(), int $status = 200) {
+        $container = $this->app->getContainer();
+
+        return $container->render->toJson($args, $status, $this->response);
+    }
+
+    /**
+     * @param array $args
+     * @param int $status
+     * @return mixed
+     */
+    protected function xml($args = array(), int $status = 200) {
+        $container = $this->app->getContainer();
+
+        return $container->render->toXML($args, $status, $this->response);
     }
 
     /**

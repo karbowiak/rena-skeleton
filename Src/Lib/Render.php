@@ -2,11 +2,11 @@
 
 namespace Rena\Lib;
 
+use PHPPM\React\HttpResponse;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Slim\Views\Twig;
 use XMLParser\XMLParser;
-use Zend\Diactoros\Response;
 
 /**
  * Class Render
@@ -50,7 +50,7 @@ class Render
         if ($contentType == "application/xml")
             return $this->toXML($dataArray, $status, $response);
 
-        return $this->toTwig($templateFile, $dataArray, $response);
+        return $this->toTwig($templateFile, $dataArray, $status, $response);
     }
 
     /**
@@ -69,11 +69,15 @@ class Render
      */
     public function toJson($dataArray = array(), int $status = 200, ResponseInterface $response)
     {
-        return $response->withStatus($status)
-            ->withHeader("Content-Type", "application/json")
+        $resp = $response->withStatus($status)
+            ->withHeader("Content-Type", "application/json; charset=utf-8")
             ->withAddedHeader("Access-Control-Allow-Origin", "*")
-            ->withAddedHeader("Access-Control-Allow-Methods", "GET, POST")
-            ->write(json_encode($dataArray));
+            ->withAddedHeader("Access-Control-Allow-Methods", "*");
+
+        $body = $response->getBody();
+        $body->write(json_encode($dataArray));
+
+        return $resp->withBody($body);
     }
 
     /**
@@ -84,20 +88,26 @@ class Render
      */
     public function toXML($dataArray = array(), int $status = 200, ResponseInterface $response)
     {
-        return $response->withStatus($status)
-            ->withHeader("Content-Type", "application/xml")
+        $resp = $response->withStatus($status)
+            ->withHeader("Content-Type", "application/xml; charset=utf-8")
             ->withAddedHeader("Access-Control-Allow-Origin", "*")
-            ->withAddedHeader("Access-Control-Allow-Methods", "GET, POST")
-            ->write(XMLParser::encode($dataArray, "rena"));
+            ->withAddedHeader("Access-Control-Allow-Methods", "*");
+
+        $body = $response->getBody();
+        $body->write(json_encode($dataArray));
+
+        return $resp->withBody($body);
     }
+
 
     /**
      * @param String $templateFile
      * @param array $dataArray
+     * @param int $status
      * @param ResponseInterface $response
      * @return ResponseInterface
      */
-    public function toTwig(String $templateFile, $dataArray = array(), ResponseInterface $response)
+    public function toTwig(String $templateFile, $dataArray = array(), int $status = 200, ResponseInterface $response)
     {
         // Get all the character information on the guy who is logged in
 
@@ -107,7 +117,12 @@ class Render
         // Merge the arrays
         $dataArray = array_merge($extraData, $dataArray);
 
-        // Render the view
-        return $this->view->render($response, $templateFile, $dataArray);
+        $resp = $response->withStatus($status)
+            ->withHeader("Content-Type", "text/html; charset=utf-8");
+
+        $body = $response->getBody();
+        $body->write($this->view->fetch($templateFile, $dataArray));
+
+        return $resp->withBody($body);
     }
 }

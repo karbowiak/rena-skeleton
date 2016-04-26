@@ -9,4 +9,8 @@ class IndexController extends RenaController
     public function index() {
         return $this->render("placeholder.html", array());
     }
+    
+    public function api() {
+        return $this->json(array("ermergerd" => true));
+    }
 }

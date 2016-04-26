@@ -1,6 +1,6 @@
 <?php
 
-namespace Rena\Lib\Middleware;
+namespace Rena\Middleware;
 
 use PHPPM\Bridges\BridgeInterface;
 use PHPPM\React\HttpResponse as ReactResponse;
@@ -53,7 +53,7 @@ class RenaBridge implements BridgeInterface
 
         $middleware = $this->middleware;
 
-        $initialResponse = new DiactorosResponse\HtmlResponse("");
+        $initialResponse = new DiactorosResponse\TextResponse("", 200, headers_list());
         $renaResp = $middleware($renaReq, $initialResponse);
 
         $this->mapResponse($renaResp, $response);
