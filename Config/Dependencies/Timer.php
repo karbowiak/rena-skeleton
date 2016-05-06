@@ -1,6 +1,6 @@
 <?php
 
-$container["Timer"] = function($container) {
+$container["timer"] = function($container) {
     return new \Rena\Lib\Timer();
 };
 

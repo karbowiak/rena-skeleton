@@ -16,13 +16,18 @@ abstract class RenaController
      */
     protected $app;
     /**
-     * @var
+     * @var \Psr\Http\Message\RequestInterface
      */
     protected $request;
     /**
-     * @var
+     * @var \Psr\Http\Message\ResponseInterface
      */
     protected $response;
+
+    /**
+     * @var \Slim\Container
+     */
+    private $container;
 
     /**
      * @param App $app
@@ -30,6 +35,7 @@ abstract class RenaController
     public function __construct(App $app)
     {
         $this->app = $app;
+        $this->container = $app->getContainer();
     }
 
     /**
@@ -103,21 +109,20 @@ abstract class RenaController
      * @return mixed
      */
     protected function render(String $file, $args = array(), int $status = 200, String $contentType = "text/html; charset=UTF-8") {
-        $container = $this->app->getContainer();
-
         // Render the view using the render method
-        return $container->render->render($file, $args, $status, $contentType, $this->response);
+        return $this->container->render->render($file, $args, $status, $contentType, $this->response);
     }
 
+    // @TODO add a fourth that is just called api, which figures out what the user has told you they want (xml / json) and use that as the header)
+    // Remember to create a new response, with the new header that the user has requested in $this->requested
+    // Something like: $response = $this->response->withHeader($this->requested->getHeader("Content-Type")); and then pass on $response
     /**
      * @param array $args
      * @param int $status
      * @return mixed
      */
     protected function json($args = array(), int $status = 200) {
-        $container = $this->app->getContainer();
-
-        return $container->render->toJson($args, $status, $this->response);
+        return $this->container->render->toJson($args, $status, $this->response);
     }
 
     /**
@@ -126,9 +131,7 @@ abstract class RenaController
      * @return mixed
      */
     protected function xml($args = array(), int $status = 200) {
-        $container = $this->app->getContainer();
-
-        return $container->render->toXML($args, $status, $this->response);
+        return $this->container->render->toXML($args, $status, $this->response);
     }
 
     /**

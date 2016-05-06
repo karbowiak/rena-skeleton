@@ -1,10 +1,9 @@
 <?php
 
 $container["view"] = function($container) {
-    
-    
+
     /** @var \Rena\Lib\Config $config */
-    $config = $container->get("Config");
+    $config = $container->get("config");
     $config = $config->getAll("settings");
     
     $view = new \Slim\Views\Twig($config["view"]["templatePath"], $config["view"]["twig"]);

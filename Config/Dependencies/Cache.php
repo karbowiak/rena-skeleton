@@ -1,8 +1,8 @@
 <?php
 
-$container["Cache"] = function($container) {
+$container["cache"] = function($container) {
     /** @var \Rena\Lib\Config $config */
-    $config = $container->get("Config");
+    $config = $container->get("config");
     return new \Rena\Lib\Cache($config);
 };
 

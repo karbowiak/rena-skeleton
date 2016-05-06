@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d04535946fe1fcc7564155c915f2293",
-    "content-hash": "dd4ef74eb070afb90512de31dd0950f2",
+    "hash": "1403b22d3b5ba8b9e1fb2136f1b0e181",
+    "content-hash": "2afd2032cb53f3e0aeaab74167b1422b",
     "packages": [
         {
             "name": "alexgarrett/violin",
@@ -239,17 +239,231 @@
             "time": "2016-04-07 06:16:25"
         },
         {
+            "name": "gossi/collection",
+            "version": "v1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/collection.git",
+                "reference": "339bda4e443645d0cd9165302ee23f44d4bdfa90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/collection/zipball/339bda4e443645d0cd9165302ee23f44d4bdfa90",
+                "reference": "339bda4e443645d0cd9165302ee23f44d4bdfa90",
+                "shasum": ""
+            },
+            "require": {
+                "gossi/common": "~0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\collection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Collections library",
+            "keywords": [
+                "collection",
+                "collections",
+                "list",
+                "map",
+                "queue",
+                "set",
+                "stack"
+            ],
+            "abandoned": "phootwork/collection",
+            "time": "2014-11-09 19:10:34"
+        },
+        {
+            "name": "gossi/common",
+            "version": "v0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/common.git",
+                "reference": "88362cd8c06d0f5f7d02870f64105d3912d95044"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/common/zipball/88362cd8c06d0f5f7d02870f64105d3912d95044",
+                "reference": "88362cd8c06d0f5f7d02870f64105d3912d95044",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\common\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Common php interfaces and classes",
+            "keywords": [
+                "commons",
+                "php"
+            ],
+            "abandoned": "phootwork/lang",
+            "time": "2014-11-06 01:24:21"
+        },
+        {
+            "name": "gossi/docblock",
+            "version": "v1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/docblock.git",
+                "reference": "9360d6c57c4d8655c59e77a50abdc5b43c3ca521"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/docblock/zipball/9360d6c57c4d8655c59e77a50abdc5b43c3ca521",
+                "reference": "9360d6c57c4d8655c59e77a50abdc5b43c3ca521",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/collection": "~1",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\docblock\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Docblock parser and generator. An API to read and write Docblocks.",
+            "keywords": [
+                "docblock",
+                "generator",
+                "parser"
+            ],
+            "time": "2015-09-18 14:16:44"
+        },
+        {
+            "name": "gossi/php-code-formatter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/php-code-formatter.git",
+                "reference": "318c01ef82fe471bca62e636dbee86bb38a6e00e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/php-code-formatter/zipball/318c01ef82fe471bca62e636dbee86bb38a6e00e",
+                "reference": "318c01ef82fe471bca62e636dbee86bb38a6e00e",
+                "shasum": ""
+            },
+            "require": {
+                "gossi/collection": "~1",
+                "php": ">=5.4",
+                "symfony/config": "~2",
+                "symfony/event-dispatcher": "~2",
+                "symfony/yaml": "~2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "gossi\\formatter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "a code formatter for php code",
+            "keywords": [
+                "beautifier",
+                "formatter",
+                "php"
+            ],
+            "time": "2014-10-18 23:05:55"
+        },
+        {
+            "name": "gossi/php-code-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gossi/php-code-generator.git",
+                "reference": "146f46609c0c94eab36a06e216a9098d9cf9c594"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gossi/php-code-generator/zipball/146f46609c0c94eab36a06e216a9098d9cf9c594",
+                "reference": "146f46609c0c94eab36a06e216a9098d9cf9c594",
+                "shasum": ""
+            },
+            "require": {
+                "gossi/docblock": "~1",
+                "nikic/php-parser": "~1",
+                "phootwork/file": "~0",
+                "phootwork/tokenizer": "~0",
+                "php": ">=5.4",
+                "symfony/options-resolver": "~2.0|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~3"
+            },
+            "suggest": {
+                "gossi/php-code-formatter": "Formatting your generated code"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "gossi\\codegen\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache2"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Gossmann",
+                    "homepage": "http://gos.si"
+                }
+            ],
+            "description": "Toolset for generating PHP code",
+            "keywords": [
+                "code generation"
+            ],
+            "time": "2016-01-01 18:33:06"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb"
+                "reference": "58e54017e95418968bddb1b16548e2e119312776"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
-                "reference": "85cb758d7367f3aaaa8ffc9269e777919c5f68bb",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/58e54017e95418968bddb1b16548e2e119312776",
+                "reference": "58e54017e95418968bddb1b16548e2e119312776",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +512,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-04-06 17:59:33"
+            "time": "2016-05-06 16:50:02"
         },
         {
             "name": "guzzlehttp/promises",
@@ -510,6 +724,62 @@
             "time": "2015-03-20 14:31:23"
         },
         {
+            "name": "jbzoo/pimpledumper",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JBZoo/PimpleDumper.git",
+                "reference": "9e5c7cff9a0b90eed73372c9d9f47340ff44f399"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JBZoo/PimpleDumper/zipball/9e5c7cff9a0b90eed73372c9d9f47340ff44f399",
+                "reference": "9e5c7cff9a0b90eed73372c9d9f47340ff44f399",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.10",
+                "pimple/pimple": "^3.0"
+            },
+            "require-dev": {
+                "jbzoo/phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JBZoo\\PimpleDumper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SmetDenis",
+                    "email": "denis@jbzoo.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "Easy way to auto create pimple.json and .phpstorm.meta.php for Pimple Container",
+            "keywords": [
+                "ArrayAccess",
+                "autocomplete",
+                "container",
+                "di",
+                "idea",
+                "phpstorm",
+                "pimple",
+                "silex"
+            ],
+            "time": "2016-04-12 14:51:04"
+        },
+        {
             "name": "jtrumbull/xml-parser",
             "version": "v1.0.2",
             "source": {
@@ -594,16 +864,16 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "317812ac843d59e60b8934537693064dbc9786d0"
+                "reference": "f145fded7d61a5388e76ed720c5dce185c1d36fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/317812ac843d59e60b8934537693064dbc9786d0",
-                "reference": "317812ac843d59e60b8934537693064dbc9786d0",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/f145fded7d61a5388e76ed720c5dce185c1d36fe",
+                "reference": "f145fded7d61a5388e76ed720c5dce185c1d36fe",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +923,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2016-04-19 12:48:05"
+            "time": "2016-04-29 15:11:06"
         },
         {
             "name": "mkraemer/react-pcntl",
@@ -809,28 +1079,231 @@
             "time": "2015-06-18 19:15:47"
         },
         {
+            "name": "nikic/php-parser",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "c4bbc8e236a1f21b2b17cfbf3d46aa6ece69b9f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/c4bbc8e236a1f21b2b17cfbf3d46aa6ece69b9f7",
+                "reference": "c4bbc8e236a1f21b2b17cfbf3d46aa6ece69b9f7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2016-01-15 21:03:42"
+        },
+        {
+            "name": "phootwork/collection",
+            "version": "v1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/collection.git",
+                "reference": "a38173350687b0e99088dbac437d8b8637195491"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/collection/zipball/a38173350687b0e99088dbac437d8b8637195491",
+                "reference": "a38173350687b0e99088dbac437d8b8637195491",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/lang": "~0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4",
+                "sami/sami": "~3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\collection\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP Collections library (List, Set, Map, Queue & Stack)",
+            "keywords": [
+                "collection",
+                "collections",
+                "list",
+                "map",
+                "queue",
+                "set",
+                "stack"
+            ],
+            "time": "2015-12-28 16:07:10"
+        },
+        {
+            "name": "phootwork/file",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/file.git",
+                "reference": "98385567469a36cd37ae24e0d7f173e2c0787bec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/file/zipball/98385567469a36cd37ae24e0d7f173e2c0787bec",
+                "reference": "98385567469a36cd37ae24e0d7f173e2c0787bec",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/lang": "~0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\file\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "File Operations for the local Filesystem",
+            "keywords": [
+                "file",
+                "filesystem"
+            ],
+            "time": "2016-04-21 15:06:11"
+        },
+        {
+            "name": "phootwork/lang",
+            "version": "v0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/lang.git",
+                "reference": "7410bbc56bb98cd47dcded81b7dfbfd3be311782"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/lang/zipball/7410bbc56bb98cd47dcded81b7dfbfd3be311782",
+                "reference": "7410bbc56bb98cd47dcded81b7dfbfd3be311782",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\lang\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "(Missing) PHP features represented by objects",
+            "time": "2015-06-23 13:11:40"
+        },
+        {
+            "name": "phootwork/tokenizer",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phootwork/tokenizer.git",
+                "reference": "6eabc110532fea70986d9e3f8a2cdc5e2406cda7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phootwork/tokenizer/zipball/6eabc110532fea70986d9e3f8a2cdc5e2406cda7",
+                "reference": "6eabc110532fea70986d9e3f8a2cdc5e2406cda7",
+                "shasum": ""
+            },
+            "require": {
+                "phootwork/collection": "~1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phootwork\\tokenizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "gossi"
+                }
+            ],
+            "description": "Tokenizer for PHP code",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2015-05-12 16:11:09"
+        },
+        {
             "name": "php-pm/php-pm",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-pm/php-pm.git",
-                "reference": "906942ef85531e750cc5c2b4abb7a8b4e9fd00f2"
+                "reference": "19164bdde107f0e724e22fe9791ceaf07bc35b65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-pm/php-pm/zipball/906942ef85531e750cc5c2b4abb7a8b4e9fd00f2",
-                "reference": "906942ef85531e750cc5c2b4abb7a8b4e9fd00f2",
+                "url": "https://api.github.com/repos/php-pm/php-pm/zipball/19164bdde107f0e724e22fe9791ceaf07bc35b65",
+                "reference": "19164bdde107f0e724e22fe9791ceaf07bc35b65",
                 "shasum": ""
             },
             "require": {
                 "mkraemer/react-pcntl": "2.0.*",
                 "monolog/monolog": "^1.3",
+                "php": ">=5.6.0",
                 "react/event-loop": "^0.4",
                 "react/http": "dev-master",
                 "react/socket-client": "^0.5.0",
                 "react/stream": "^0.4",
                 "symfony/console": "^2.6|^3.0",
-                "symfony/debug": "^2.6|^3.0",
+                "symfony/debug": "^2.8|^3.0",
                 "symfony/process": "^2.6|^3.0"
             },
             "require-dev": {
@@ -855,7 +1328,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2016-04-25 20:15:11"
+            "time": "2016-05-04 10:10:11"
         },
         {
             "name": "php-school/cli-menu",
@@ -1208,16 +1681,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "f942da7b505d1a294284ab343d05df42d02ad6d9"
+                "reference": "8025426794f1944de806618671d4fa476dc7626f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/f942da7b505d1a294284ab343d05df42d02ad6d9",
-                "reference": "f942da7b505d1a294284ab343d05df42d02ad6d9",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/8025426794f1944de806618671d4fa476dc7626f",
+                "reference": "8025426794f1944de806618671d4fa476dc7626f",
                 "shasum": ""
             },
             "require": {
@@ -1248,7 +1721,7 @@
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2016-03-31 13:10:33"
+            "time": "2016-05-03 17:50:52"
         },
         {
             "name": "react/socket",
@@ -1604,21 +2077,21 @@
         },
         {
             "name": "symfony/config",
-            "version": "dev-master",
+            "version": "2.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "1c01ac3d32124d922e1676aa09b550d0fa4b6f7a"
+                "reference": "edbbcf33cffa2a85104fc80de8dc052cc51596bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/1c01ac3d32124d922e1676aa09b550d0fa4b6f7a",
-                "reference": "1c01ac3d32124d922e1676aa09b550d0fa4b6f7a",
+                "url": "https://api.github.com/repos/symfony/config/zipball/edbbcf33cffa2a85104fc80de8dc052cc51596bb",
+                "reference": "edbbcf33cffa2a85104fc80de8dc052cc51596bb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
-                "symfony/filesystem": "~2.8|~3.0"
+                "php": ">=5.3.9",
+                "symfony/filesystem": "~2.3|~3.0.0"
             },
             "suggest": {
                 "symfony/yaml": "To use the yaml reference dumper"
@@ -1626,7 +2099,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -1653,7 +2126,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-20 18:54:21"
+            "time": "2016-04-20 18:52:26"
         },
         {
             "name": "symfony/console",
@@ -1661,12 +2134,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8e6292db6e77aa7fec40aaf12ae4bdee6b5b8007"
+                "reference": "34a214710e0714b6efcf40ba3cd1e31373a97820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8e6292db6e77aa7fec40aaf12ae4bdee6b5b8007",
-                "reference": "8e6292db6e77aa7fec40aaf12ae4bdee6b5b8007",
+                "url": "https://api.github.com/repos/symfony/console/zipball/34a214710e0714b6efcf40ba3cd1e31373a97820",
+                "reference": "34a214710e0714b6efcf40ba3cd1e31373a97820",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +2186,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-20 18:53:54"
+            "time": "2016-04-28 09:48:42"
         },
         {
             "name": "symfony/debug",
@@ -1773,17 +2246,77 @@
             "time": "2016-03-30 10:41:47"
         },
         {
-            "name": "symfony/filesystem",
-            "version": "dev-master",
+            "name": "symfony/event-dispatcher",
+            "version": "2.8.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "5751e80d6f94b7c018f338a4a7be0b700d6f3058"
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "a158f13992a3147d466af7a23b564ac719a4ddd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/5751e80d6f94b7c018f338a4a7be0b700d6f3058",
-                "reference": "5751e80d6f94b7c018f338a4a7be0b700d6f3058",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a158f13992a3147d466af7a23b564ac719a4ddd8",
+                "reference": "a158f13992a3147d466af7a23b564ac719a4ddd8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
+                "symfony/dependency-injection": "~2.6|~3.0.0",
+                "symfony/expression-language": "~2.6|~3.0.0",
+                "symfony/stopwatch": "~2.3|~3.0.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-05-03 18:59:18"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "3.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "74fec3511b62cb934b64bce1d96f06fffa4beafd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/74fec3511b62cb934b64bce1d96f06fffa4beafd",
+                "reference": "74fec3511b62cb934b64bce1d96f06fffa4beafd",
                 "shasum": ""
             },
             "require": {
@@ -1792,7 +2325,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1819,7 +2352,61 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-04-12 18:27:47"
+            "time": "2016-04-12 18:09:53"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "5c775652b6fb1bf8f8f5d5779c5153bea89d2589"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/5c775652b6fb1bf8f8f5d5779c5153bea89d2589",
+                "reference": "5c775652b6fb1bf8f8f5d5779c5153bea89d2589",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2016-03-04 07:56:56"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2076,25 +2663,25 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "dev-master",
+            "version": "2.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "407e31ad9742ace5c3d01642f02a3b2e6062bae5"
+                "reference": "e4fbcc65f90909c999ac3b4dfa699ee6563a9940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/407e31ad9742ace5c3d01642f02a3b2e6062bae5",
-                "reference": "407e31ad9742ace5c3d01642f02a3b2e6062bae5",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e4fbcc65f90909c999ac3b4dfa699ee6563a9940",
+                "reference": "e4fbcc65f90909c999ac3b4dfa699ee6563a9940",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=5.3.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -2121,7 +2708,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-30 14:44:34"
+            "time": "2016-03-29 19:00:15"
         },
         {
             "name": "twig/twig",
@@ -2190,12 +2777,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "452b01b64488c97a36c77f293e149ccf2c3e81d7"
+                "reference": "b4e7758556c97b5bb9a5260d898e9788ee800538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/452b01b64488c97a36c77f293e149ccf2c3e81d7",
-                "reference": "452b01b64488c97a36c77f293e149ccf2c3e81d7",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/b4e7758556c97b5bb9a5260d898e9788ee800538",
+                "reference": "b4e7758556c97b5bb9a5260d898e9788ee800538",
                 "shasum": ""
             },
             "require": {
@@ -2232,7 +2819,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-03-17 18:04:49"
+            "time": "2016-04-28 14:57:25"
         },
         {
             "name": "zeuxisoo/slim-whoops",
@@ -2290,7 +2877,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "php-pm/php-pm": 20
+        "php-pm/php-pm": 20,
+        "gossi/php-code-generator": 20,
+        "gossi/php-code-formatter": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

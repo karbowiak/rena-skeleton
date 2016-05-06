@@ -86,7 +86,7 @@ class Db
             $this->cache->persistence = false;
 
         $host = $config->get("unixSocket", "database") ? ";unix_socket=" . $config->get("unixSocket", "database", "/var/run/mysqld/mysqld.sock") : ";host=" . $config->get("host", "database", "127.0.0.1");
-        $dsn = "mysql:dbname=" . $config->get("name", "database") . "{$host};charset=utf8";
+        $dsn = "mysql:dbname=" . $config->get("dbName", "database") . "{$host};charset=utf8";
 
         try {
             $this->pdo = new PDO($dsn, $config->get("username", "database"), $config->get("password", "database"), array(

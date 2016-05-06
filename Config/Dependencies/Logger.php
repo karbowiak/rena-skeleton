@@ -1,8 +1,8 @@
 <?php
 
-$container["Logger"] = function($container) {
+$container["logger"] = function($container) {
     /** @var \Rena\Lib\Config $config */
-    $config = $container->get("Config");
+    $config = $container->get("config");
     $config = $config->getAll("settings");
 
     $logger = new \Monolog\Logger($config["logger"]["name"]);

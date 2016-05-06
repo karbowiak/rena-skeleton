@@ -17,7 +17,7 @@ require_once(__DIR__ . "/../Config/Dependencies.php");
 
 // Start the session
 /** @var \Slim\Container $container */
-$session = $container->get("Session");
+$session = $container->get("session");
 session_set_save_handler($session, true);
 session_cache_limiter(false);
 session_start();

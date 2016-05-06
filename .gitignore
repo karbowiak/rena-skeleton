@@ -2,3 +2,4 @@ vendor/
 Cache/*
 .idea/
 composer.phar
+Config.php

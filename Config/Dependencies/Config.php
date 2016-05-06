@@ -1,6 +1,6 @@
 <?php
 
-$container["Config"] = function($container) {
+$container["config"] = function($container) {
     return new \Rena\Lib\Config();
 };
 

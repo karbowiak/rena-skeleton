@@ -41,6 +41,9 @@
     "killmails/oauth2-eve": "0.2.*",
     "php-pm/php-pm": "dev-master",
     "zendframework/zend-diactoros": "1.3.*",
-    "jtrumbull/xml-parser": "1.0.*"
+    "jtrumbull/xml-parser": "1.0.*",
+    "jbzoo/pimpledumper": "1.2.*",
+    "gossi/php-code-generator": "dev-master",
+    "gossi/php-code-formatter": "dev-master"
   }
 }
