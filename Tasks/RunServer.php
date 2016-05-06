@@ -2,7 +2,6 @@
 
 namespace Rena\Tasks;
 
-use PHPPM\Client;
 use PHPPM\Commands\StartCommand;
 use PHPPM\ProcessManager;
 use Symfony\Component\Console\Command\Command;
@@ -45,7 +44,8 @@ class RunServer extends StartCommand
             ->addOption('static', null, InputOption::VALUE_OPTIONAL, 'Deactivates the static file serving. 1|0', 1)
             ->addOption('max-requests', null, InputOption::VALUE_OPTIONAL, 'Max requests per worker until it will be restarted', 3000)
             ->addOption('concurrent-requests', null, InputOption::VALUE_OPTIONAL, 'If a worker is allowed to handle more than one request at the same time. This can lead to issues when the application does not support it but makes it faster. (like when they operate on globals at the same time) 1|0', 0)
-            ->addOption('php-cgi', null, InputOption::VALUE_OPTIONAL, 'Full path to the php-cgi executable', false);
+            ->addOption('cgi-path', null, InputOption::VALUE_OPTIONAL, 'Full path to the php-cgi executable', false)
+            ->addOption('socket-path', null, InputOption::VALUE_OPTIONAL, 'Path to a folder where socket files will be placed. Relative to working-directory or cwd()', '.ppm/run/');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -54,7 +54,7 @@ class RunServer extends StartCommand
             chdir($workingDir);
         }
         
-        $config = $this->loadConfig($input);
+        $config = $this->loadConfig($input, $output);
 
         if ($path = $this->getConfigPath()) {
             $modified = '';
@@ -72,11 +72,13 @@ class RunServer extends StartCommand
         
         $handler->setBridge("\\Rena\\Middleware\\RenaBridge");
         $handler->setAppBootstrap("\\Rena\\Middleware\\RenaBootstrap");
+
         $handler->setAppEnv($config['app-env']);
         $handler->setDebug((boolean)$config['debug']);
         $handler->setLogging((boolean)$config['logging']);
         $handler->setMaxRequests($config['max-requests']);
-        $handler->setPhpCgiExecutable($config['php-cgi']);
+        $handler->setPhpCgiExecutable($config['cgi-path']);
+        $handler->setSocketPath($config['socket-path']);
         $handler->setConcurrentRequestsPerWorker($config['concurrent-requests']);
         $handler->setServingStatic($config['static']);
 
