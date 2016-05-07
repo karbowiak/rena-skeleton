@@ -45,14 +45,14 @@ class CreateMiddleware extends Command
                 return;
             }
         }
-        if (!file_exists($directory . ucfirst($name) . "Controller.php")) {
-            $fh = fopen($directory . ucfirst($name) . "Controller.php", "w");
+        if (!file_exists($directory . ucfirst($name) . "MiddleWare.php")) {
+            $fh = fopen($directory . ucfirst($name) . "MiddleWare.php", "w");
             fwrite($fh, $file);
             fclose($fh);
-            $className = ucfirst($name) . "Controller.php";
-            $output->writeln("Success, Controller {$name} has been created");
+            $className = ucfirst($name) . "MiddleWare.php";
+            $output->writeln("Success, MiddleWare {$name} has been created");
         } else {
-            $output->writeln("Error, Controller {$name} already exists.");
+            $output->writeln("Error, MiddleWare {$name} already exists.");
         }
     }
 }

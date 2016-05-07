@@ -1,11 +1,11 @@
 <?php
-namespace Rena\Tasks\Websockets;
+namespace Rena\Tasks\WebSockets;
 
 use Ratchet\ConnectionInterface;
 use Ratchet\MessageComponentInterface;
 use Slim\Container;
 
-class ?nameWebSocket implements MessageComponentInterface {
+class EchoWebSocket implements MessageComponentInterface {
     /**
      * @var \SplObjectStorage
      */

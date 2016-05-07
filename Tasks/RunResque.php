@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class Runresque extends Command
+class RunResque extends Command
 {
     protected function configure()
     {
@@ -18,6 +18,16 @@ class Runresque extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("Runresque task");
+        require_once(__DIR__ . "/../vendor/chrisboulton/php-resque/lib/Resque.php");
+        require_once(__DIR__ . "/../vendor/chrisboulton/php-resque/lib/Resque/Worker.php");
+        require_once(__DIR__ . "/../Config/Dependencies.php");
+
+        $queues = "rt,high,med,low";
+        $logLevel = \Resque_Worker::LOG_NORMAL;
+        $interval = 5;
+        $worker = new \Resque_Worker($queues);
+        $worker->logLevel = $logLevel;
+        $output->writeln("Starting Resque Worker");
+        $worker->work($interval);
     }
 }

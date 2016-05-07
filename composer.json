@@ -44,6 +44,10 @@
     "jtrumbull/xml-parser": "1.0.*",
     "jbzoo/pimpledumper": "1.2.*",
     "gossi/php-code-generator": "dev-master",
-    "gossi/php-code-formatter": "dev-master"
+    "gossi/php-code-formatter": "dev-master",
+    "chrisboulton/php-resque": "1.*",
+    "react/zmq": "0.3.*",
+    "ratchet/pawl": "0.2.*",
+    "cboden/ratchet": "0.3.*"
   }
 }

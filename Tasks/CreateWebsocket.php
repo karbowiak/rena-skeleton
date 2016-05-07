@@ -21,7 +21,7 @@ class CreateWebsocket extends Command
     {
         $name = prompt("Name of Websocket");
 
-        $directory = __DIR__ . "/Websocket/";
+        $directory = __DIR__ . "/Websockets/";
 
         $file = file_get_contents(__DIR__ . "/../Scaffolds/websocket_template.txt");
 
@@ -45,14 +45,14 @@ class CreateWebsocket extends Command
                 return;
             }
         }
-        if (!file_exists($directory . ucfirst($name) . "Controller.php")) {
-            $fh = fopen($directory . ucfirst($name) . "Controller.php", "w");
+        if (!file_exists($directory . ucfirst($name) . "WebSocket.php")) {
+            $fh = fopen($directory . ucfirst($name) . "WebSocket.php", "w");
             fwrite($fh, $file);
             fclose($fh);
-            $className = ucfirst($name) . "Controller.php";
-            $output->writeln("Success, Controller {$name} has been created");
+            $className = ucfirst($name) . "WebSocket.php";
+            $output->writeln("Success, WebSocket {$name} has been created");
         } else {
-            $output->writeln("Error, Controller {$name} already exists.");
+            $output->writeln("Error, WebSocket {$name} already exists.");
         }
     }
 }

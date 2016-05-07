@@ -45,14 +45,14 @@ class CreateHelper extends Command
                 return;
             }
         }
-        if (!file_exists($directory . ucfirst($name) . "Controller.php")) {
-            $fh = fopen($directory . ucfirst($name) . "Controller.php", "w");
+        if (!file_exists($directory . ucfirst($name) . ".php")) {
+            $fh = fopen($directory . ucfirst($name) . ".php", "w");
             fwrite($fh, $file);
             fclose($fh);
-            $className = ucfirst($name) . "Controller.php";
-            $output->writeln("Success, Controller {$name} has been created");
+            $className = ucfirst($name) . ".php";
+            $output->writeln("Success, {$name} has been created");
         } else {
-            $output->writeln("Error, Controller {$name} already exists.");
+            $output->writeln("Error, {$name} already exists.");
         }
     }
 }

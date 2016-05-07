@@ -15,7 +15,7 @@ require_once(__DIR__ . "/Config/Dependencies.php");
 $cli = new Symfony\Component\Console\Application("Rena CLI");
 
 // Load all the commands
-$dirs = array("Tasks/*.php", "App/Tasks/*.php", "Tasks/*/*.php", "App/Tasks/*/*.php", "Tasks/*/*/*.php", "App/Tasks/*/*/*.php");
+$dirs = array("Tasks/*.php", "App/Tasks/*.php");
 $tasks = array();
 foreach ($dirs as $dir) {
     $files = glob($dir);
